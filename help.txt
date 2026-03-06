@@ -1,0 +1,36 @@
+Usage: index [options] [project-name]
+
+Create a new Medusa project or plugin
+
+Arguments:
+  project-name             Name of the project to create.
+
+Options:
+  --plugin                 Create a plugin instead of a project.
+  --repo-url <url>         URL of repository to use to setup project.
+  --version <version>      The version of Medusa packages to install.
+  --seed                   Seed the created database with demo data.
+  --skip-db                Skips creating the database, running migrations, and
+                           seeding, and subsequently skips opening the browser.
+                           (default: false)
+  --db-url <url>           Skips database creation and sets the database URL to
+                           the provided URL. Throws an error if can't connect
+                           to the database. Will still run migrations and open
+                           the admin after project creation.
+  --no-migrations          Skips running migrations, creating admin user, and
+                           seeding. If used, it's expected that you pass the
+                           --db-url option with a url of a database that has
+                           all necessary migrations. Otherwise, unexpected
+                           errors will occur.
+  --no-browser             Disables opening the browser at the end of the
+                           project creation and only shows success message.
+  --directory-path <path>  Specify the directory path to install the project
+                           in.
+  --with-nextjs-starter    Install the Next.js starter along with the Medusa
+                           backend (default: false)
+  --verbose                Show all logs of underlying commands. Useful for
+                           debugging. (default: false)
+  --use-npm                Use npm as the package manager
+  --use-yarn               Use yarn as the package manager
+  --use-pnpm               Use pnpm as the package manager
+  -h, --help               display help for command

@@ -1,0 +1,13 @@
+diff --git a/packages/admin/dashboard/vite.config.mts b/packages/admin/dashboard/vite.config.mts
+index 35b67890a6..ba5438f945 100644
+--- a/packages/admin/dashboard/vite.config.mts
++++ b/packages/admin/dashboard/vite.config.mts
+@@ -30,6 +30,8 @@ export default defineConfig(({ mode }) => {
+       __BASE__: JSON.stringify(BASE),
+       __BACKEND_URL__: JSON.stringify(BACKEND_URL),
+       __STOREFRONT_URL__: JSON.stringify(STOREFRONT_URL),
++      __AUTH_TYPE__: JSON.stringify("session"),
++      __JWT_TOKEN_STORAGE_KEY__: JSON.stringify("medusa_jwt_token"),
+     },
+     server: {
+       open: true,
